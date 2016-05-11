@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <link rel='stylesheet' href="~/Content/fullcalendar.css" />
+    <script src="~/Scripts/jquery-2.2.3.min.js"></script>
+    <script src="~/Scripts/moment.min.js"></script>
+    <script src="~/Scripts/fullcalendar.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // page is now ready, initialize the calendar...
+
+            $('#calendar').fullCalendar({
+                // put your options and callbacks here
+            })
+
+        });
+
+        $('#calendar').fullCalendar({
+            dayClick: function () {
+                alert('a day has been clicked!');
+            }
+        });
+
+        $('#calendar').fullCalendar('next');
+    </script>
+</head>
+<body>
+    <div id="calendar"></div>
+</body>
+</html>
